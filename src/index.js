@@ -1,7 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 import 'jquery/dist/jquery';
 import 'popper.js/dist/umd/popper';
 import 'bootstrap/dist/js/bootstrap';
+import 'slick-carousel/slick/slick';
+
+
 
 import React from 'react';
 import ReactDOM from 'react-dom';

@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 export class MovieCard extends Component {
+
+
   render () {
     return (
       <>
         {/* <h3>MovieCard</h3> */ }
-        <div className="movie-card w-25" >
+        <div className="movie-card" >
           <div className="card" >
             <aside>
               <div>

@@ -7,6 +7,7 @@ let initialState = {
 };
 
 const fetchMoviesReducers = ( state = initialState, action ) => {
+
   switch ( action.type ) {
     case MOVIE_FETCH_MOVIES_REQUEST:
       state.loading = true;
@@ -15,6 +16,8 @@ const fetchMoviesReducers = ( state = initialState, action ) => {
       return { ...state };
 
     case MOVIE_FETCH_MOVIES_SUCCESS:
+      // console.log( action );
+
       state.loading = false;
       state.data = action.data;
       state.error = null;

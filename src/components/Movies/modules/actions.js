@@ -25,6 +25,7 @@ const actFetchMovies = () => dispatch => {
     method: "GET"
   } )
     .then( result => {
+      // console.log( result );
       dispatch( actFetchMoviesSuccess( result.data ) );
     } )
     .catch( error => {
