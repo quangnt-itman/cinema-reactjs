@@ -25,8 +25,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build-sass": "node-sass src/scss/main.scss src/css/main.css",
-    "watch-sass": "node-sass -w src/scss/main.scss src/css/main.css --output-style=compressed"
+    "build-sass": "node-sass src/assets/scss/main.scss src/assets/css/main.css",
+    "watch-sass": "node-sass -w src/assets/scss/main.scss src/assets/css/main.css --output-style=compressed"
   },
   "eslintConfig": {
     "extends": [

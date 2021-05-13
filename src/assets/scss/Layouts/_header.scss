@@ -3,7 +3,7 @@ header#header {
   top: 0;
   z-index: 999;
 
-  & > nav#navbar-header {
+  & > nav#navbar-home {
     // position: fixed;
     // top: 0px;
     left: 0;
@@ -35,7 +35,7 @@ header#header {
 //   // background-color: blue;
 // }
 
-footer {
-  height: 1000px;
-  background-color: green;
-}
+// footer {
+//   height: 1000px;
+//   background-color: green;
+// }
