@@ -2,6 +2,7 @@ import React from 'react';
 import { Route } from 'react-router';
 
 function HomeLayout ( props ) {
+  // console.log( props );
   return (
     <>
       {props.children }
