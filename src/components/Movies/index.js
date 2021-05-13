@@ -69,7 +69,7 @@ export class Movies extends Component {
   render () {
     // console.log( this );
     return (
-      <div id="moives">
+      <div id="movies">
         <h3>Movies</h3>
         <div id="movies-slide">
           {
