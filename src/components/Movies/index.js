@@ -6,16 +6,18 @@ import $ from 'jquery/dist/jquery';
 
 
 
+
 export class Movies extends Component {
   componentDidMount () {
     this.props.fetchMovies();
+
   }
 
   componentDidUpdate ( prevProps, prevState ) {
     $( document ).ready( function () {
       $( '#movies-slide' ).slick( {
-        autoplay: true,
-        autoplaySpeed: 1000,
+        // autoplay: true,
+        // autoplaySpeed: 1000,
         className: 'movies-slick',
         dots: false,
         infinite: true,
