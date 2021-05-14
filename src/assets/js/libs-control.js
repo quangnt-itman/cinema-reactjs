@@ -1,3 +1,4 @@
+// import $ from './jQuery';
 import $ from 'jquery/dist/jquery';
 
 export const slickConfigure = () => {

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+// import { slickConfigure } from '../../assets/js/libs-control';
 
 export class MovieCard extends Component {
 
-
   render () {
     let { movie } = this.props;
-    console.log( movie );
+    // console.log( movie );
     return (
       <>
         {/* <h3>MovieCard</h3> */ }

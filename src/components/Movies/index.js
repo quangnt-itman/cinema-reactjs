@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import MovieCard from '../MovieCard';
-import { actFetchMovies } from './modules/actions';
+// import { actFetchMovies } from './modules/actions';
 import { slickConfigure } from '../../assets/js/libs-control';
+
+import { actFetchMovies } from '../../ReduxStore/reducers/modules/movieReducers';
 
 export class Movies extends Component {
   componentDidMount () {
     this.props.fetchMovies();
-
   }
-
   componentDidUpdate ( prevProps, prevState ) {
-    // console.log( { prevProps, prevState } );
-    slickConfigure();
+    !this.props.loading && slickConfigure();
   }
+
   render () {
-    // console.log( this );
     return (
       <div id="movies">
         <h3>Movies</h3>
@@ -31,11 +30,13 @@ export class Movies extends Component {
 }
 
 const mapStateToProps = ( state ) => ( {
-  movies: state.movieReducers.fetchMoviesReducers.data
+  loading: state.movieReducers.loading,
+  movies: state.movieReducers.data
 } );
 
 const mapDispatchToProps = dispatch => ( {
   fetchMovies: () => dispatch( actFetchMovies() )
+  // fetchMovies: () => dispatch(  )
 } );
 
 export default connect( mapStateToProps, mapDispatchToProps )( Movies );

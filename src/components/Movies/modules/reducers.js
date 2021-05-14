@@ -11,21 +11,20 @@ const fetchMoviesReducers = ( state = initialState, action ) => {
   switch ( action.type ) {
     case MOVIE_FETCH_MOVIES_REQUEST:
       state.loading = true;
-      state.data = [];
+      state.data = null;
       state.error = null;
       return { ...state };
 
     case MOVIE_FETCH_MOVIES_SUCCESS:
-      // console.log( action );
-
       state.loading = false;
       state.data = action.data;
       state.error = null;
       return { ...state };
 
     case MOVIE_FETCH_MOVIES_FAILED:
+      console.log( 'false' );
       state.loading = false;
-      state.data = [];
+      state.data = null;
       state.error = action.error;
       return { ...state };
 

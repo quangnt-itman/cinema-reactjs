@@ -5,6 +5,7 @@ import '@fancyapps/fancybox/dist/jquery.fancybox.css';
 
 
 import 'jquery/dist/jquery';
+// import './assets/js/jQuery';
 import 'popper.js/dist/umd/popper';
 import 'bootstrap/dist/js/bootstrap';
 import 'slick-carousel/slick/slick';
