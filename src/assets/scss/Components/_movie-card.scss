@@ -1,9 +1,22 @@
 .movie-card {
   padding: 1vmax;
-
+  height:400px;
+  min-height: 20vmax;
+  max-height: 40vmax;
   overflow: hidden;
+
   & > .card {
+    height:100%;
     overflow: hidden;
+
+    & > .card-img {
+      height:75%;
+      & > img {
+        height:100%;
+        object-fit: cover;
+      }
+    }
+
     & > aside {
       position: absolute;
       z-index: 1;

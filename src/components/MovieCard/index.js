@@ -5,6 +5,8 @@ export class MovieCard extends Component {
 
 
   render () {
+    let { movie } = this.props;
+    console.log( movie );
     return (
       <>
         {/* <h3>MovieCard</h3> */ }
@@ -13,11 +15,11 @@ export class MovieCard extends Component {
             <aside>
               <div>
                 <a
-                  href="https://www.youtube.com/watch?v=Ws-QlpSltr8"
+                  href={ movie.trailer }
                   // type="button"
                   className="play "
                   data-fancybox="video"
-                  data-caption="Trailler"
+                  data-caption="Trailer"
                 // data-toggle="modal"
                 // data-target="#movie-card-modal"
                 >
@@ -27,10 +29,10 @@ export class MovieCard extends Component {
               </div>
             </aside>
             <div className="card-img">
-              <img src="./assets/images/movie-1.jpg" className="card-img-top" alt="" />
+              <img src={ movie.hinhAnh } className="card-img-top" alt="" />
             </div>
             <div className="card-body">
-              <p className="card-text">movie name</p>
+              <p className="card-text">{ movie.tenPhim }</p>
             </div>
           </div>
         </div>

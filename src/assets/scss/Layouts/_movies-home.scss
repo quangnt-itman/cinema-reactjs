@@ -22,6 +22,10 @@ nav#nav-home-movies {
   .slick-next::before {
     color: red;
   }
+
+  & .slick-track{
+    display:flex;
+  }
 }
 .slick-slider .slick-arrow.right {
   right: -65px;
