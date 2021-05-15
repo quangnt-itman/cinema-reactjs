@@ -5,13 +5,17 @@ import MovieCard from '../MovieCard';
 import { slickConfigure } from '../../assets/js/libs-control';
 
 import { actFetchMovies } from '../../ReduxStore/reducers/modules/movieReducers/actions';
+// import '@fancyapps/fancybox/dist/jquery.fancybox';
 
 export class Movies extends Component {
   componentDidMount () {
     this.props.fetchMovies();
   }
   componentDidUpdate ( prevProps, prevState ) {
+    let fancy = () => import( '@fancyapps/fancybox/dist/jquery.fancybox' ).then( result => result );
+
     !this.props.loading && slickConfigure();
+    !this.props.loading && fancy();
   }
 
   render () {
