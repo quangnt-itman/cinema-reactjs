@@ -1,4 +1,3 @@
-import axios from 'axios';
 import * as types from './constants';
 
 let initialState = {
@@ -32,29 +31,6 @@ const movieReducers = ( state = initialState, action ) => {
   }
 };
 
-const actFetchMovies = () => dispatch => {
-  dispatch( {
-    type: types.R_MOVIE_REQUEST,
-  } );
-
-  axios( {
-    url:
-      "http://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP01",
-    method: "GET"
-  } )
-    .then( result => {
-      dispatch( {
-        type: types.R_MOVIE_SUCCESS,
-        data: result.data
-      } );
-    } )
-    .catch( error => {
-      dispatch( {
-        type: types.R_MOVIE_FAILED,
-        error
-      } );
-    } );
-};
 
 
-export { movieReducers, actFetchMovies };
+export { movieReducers };

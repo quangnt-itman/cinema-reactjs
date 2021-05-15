@@ -4,7 +4,7 @@ import MovieCard from '../MovieCard';
 // import { actFetchMovies } from './modules/actions';
 import { slickConfigure } from '../../assets/js/libs-control';
 
-import { actFetchMovies } from '../../ReduxStore/reducers/modules/movieReducers';
+import { actFetchMovies } from '../../ReduxStore/reducers/modules/movieReducers/actions';
 
 export class Movies extends Component {
   componentDidMount () {

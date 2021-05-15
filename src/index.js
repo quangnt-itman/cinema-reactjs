@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import '@fancyapps/fancybox/dist/jquery.fancybox.css';
+// import '@fancyapps/fancybox/dist/jquery.fancybox.css';
 
 
 import 'jquery/dist/jquery';
@@ -9,7 +9,7 @@ import 'jquery/dist/jquery';
 import 'popper.js/dist/umd/popper';
 import 'bootstrap/dist/js/bootstrap';
 import 'slick-carousel/slick/slick';
-import '@fancyapps/fancybox/dist/jquery.fancybox';
+// import '@fancyapps/fancybox/dist/jquery.fancybox';
 
 
 import React from 'react';
