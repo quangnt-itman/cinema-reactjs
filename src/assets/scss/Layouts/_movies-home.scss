@@ -1,5 +1,5 @@
-nav#nav-home-movies {
-  & > div.nav.nav-tabs#nav-home-movies-tab {
+nav#nav-movies-home {
+  & > div.nav.nav-tabs#nav-movies-home-tab {
     justify-content: center;
     border-style: none;
 
@@ -8,7 +8,7 @@ nav#nav-home-movies {
       color: #495057;
     }
     & > .nav-link.active {
-      color: #007bff;
+      color: #ec7532;
     }
   }
 }

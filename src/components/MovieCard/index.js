@@ -29,7 +29,7 @@ export class MovieCard extends Component {
               </div>
             </aside>
             <div className="card-img">
-              <img src={ movie.hinhAnh } className="card-img-top" alt="" />
+              <img src={ movie.hinhAnh } className="card-img-top" alt={ movie.biDanh } />
             </div>
             <div className="card-body">
               <p className="card-text">{ movie.tenPhim }</p>
