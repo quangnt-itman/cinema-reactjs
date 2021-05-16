@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import MovieCard from '../MovieCard';
-// import { actFetchMovies } from './modules/actions';
+import { actFetchMovies } from './modules/actions';
 import { slickConfigure } from '../../assets/js/libs-control';
 
-import { actFetchMovies } from '../../ReduxStore/reducers/modules/movieReducers/actions';
+// import { actFetchMovies } from '../../ReduxStore/reducers/modules/movieReducers/actions';
 // import '@fancyapps/fancybox/dist/jquery.fancybox';
 
 export class Movies extends Component {
@@ -57,8 +57,8 @@ export class Movies extends Component {
 }
 
 const mapStateToProps = ( state ) => ( {
-  loading: state.movieReducers.loading,
-  movies: state.movieReducers.data
+  loading: state.movieReducers.fetchMoviesReducers.loading,
+  movies: state.movieReducers.fetchMoviesReducers.data
 } );
 
 const mapDispatchToProps = dispatch => ( {

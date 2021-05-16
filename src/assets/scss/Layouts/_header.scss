@@ -30,7 +30,8 @@ header#header {
     }
 
     & #navbarSupportedContent{
-      background-color: rgba(255, 255, 255, 0.9) !important;
+      // background-color: rgba(255, 255, 255, 0.9) !important;
+      background-color: transparent;
     }
   }
 }

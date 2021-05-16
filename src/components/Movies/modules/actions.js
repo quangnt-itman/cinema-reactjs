@@ -17,6 +17,7 @@ const actFetchMoviesFailed = ( error ) => ( {
 
 
 const actFetchMovies = () => dispatch => {
+  // console.log( dispatch );
   dispatch( actFetchMoviesRequest() );
 
   axios( {

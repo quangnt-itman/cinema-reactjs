@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Carousel from '../../../components/Carousel';
+import Cinemas from '../../../components/Cinemas';
 import Movies from '../../../components/Movies';
 
 export class HomePage extends Component {
@@ -9,6 +10,7 @@ export class HomePage extends Component {
         {/* <h3>HomePage</h3> */ }
         <Carousel />
         <Movies />
+        <Cinemas />
       </div>
     );
   }

@@ -1,0 +1,3 @@
+export const CINEMA_FETCH_CINEMA_SYSTEMS_REQUEST = 'cinema/FetchCinemaSystemsReducers/FETCH_CINEMA_SYSTEMS_REQUEST';
+export const CINEMA_FETCH_CINEMA_SYSTEMS_SUCCESS = 'cinema/FetchCinemaSystemsReducers/FETCH_CINEMA_SYSTEMS_SUCCESS';
+export const CINEMA_FETCH_CINEMA_SYSTEMS_FAILED = 'cinema/FetchCinemaSystemsReducers/FETCH_CINEMA_SYSTEMS_FAILED';
