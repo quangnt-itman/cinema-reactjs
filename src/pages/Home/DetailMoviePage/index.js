@@ -19,7 +19,7 @@ class DetailMoviePage extends Component {
     return (
       <div id="detail-movie">
         <h1>Detail Movie</h1>
-        <div className="container">
+        <div className="container-fluid">
           <div className="row">
             <div className="col-sm-4" id="moviephoto">
               <img src={movie && movie.hinhAnh} alt="" />
