@@ -21,7 +21,7 @@ export const slickConfigure = () => {
           settings: {
             slidesToScroll: 1,
             slidesToShow: 3,
-            dots: true,
+            dots: false,
           }
         },
         {
