@@ -9,11 +9,11 @@ export class CinemaSystems extends Component {
     this.props.fetchCinemaSystems();
   }
   render () {
-    let { cinemaSystems, fetchCinemaClusters } = this.props;
+    let { cinemaSystems,  } = this.props;
 
     return (
       <div className="cinema-systems">
-        <div class="list-group" id="list-tab" role="tablist">
+        <div className="list-group" id="list-tab" role="tablist">
           {
             cinemaSystems && cinemaSystems.map( ( item, index ) => (
               <CinemaSystemsTab cinemaSystem={ item } key={ index } />
@@ -32,7 +32,6 @@ const mapStateToProps = ( state ) => ( {
 
 const mapDispatchToProps = dispatch => ( {
   fetchCinemaSystems: () => dispatch( actFetchCinemaSystems() ),
-  fetchCinemaClusters: ( maHeThongRap ) => dispatch( actFetchCinemaClusters( maHeThongRap ) ),
 } );
 
 export default connect( mapStateToProps, mapDispatchToProps )( CinemaSystems );

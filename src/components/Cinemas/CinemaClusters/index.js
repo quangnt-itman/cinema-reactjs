@@ -6,14 +6,14 @@ import CinemaClustersTabContent from './CinemaClustersTabContent';
 export class CinemaClusters extends Component {
   render () {
     return (
-      <div className="cinema-cluster">
+      <div className="cinema-clusters tab-content" id="nav-tabContent">
         <div className="row">
-          <div className="col-5">
+          <div className="col-sm-5 cinema-cluster-col-left ">
             <div className="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
               <CinemaClustersTab />
             </div>
           </div>
-          <div className="col-7">
+          <div className="col-sm-7 border-left">
             <div className="tab-content" id="v-pills-tabContent">
               <CinemaClustersTabContent />
             </div>

@@ -12,7 +12,7 @@ export class CinemaClustersTab extends Component {
             if ( i === 0 ) {
               return (
                 <a
-                  className="nav-link active"
+                  className="nav-link border-bottom active"
                   id={ `v-pills-${ item.maCumRap }-tab` }
                   data-toggle="pill"
                   href={ `#v-pills-${ item.maCumRap }` }
@@ -21,14 +21,22 @@ export class CinemaClustersTab extends Component {
                   aria-selected="true"
                   key={ i }
                 >
-                  {item.tenCumRap }
+                  {/* {item.tenCumRap } */ }
+                  <div className="media">
+                    <img src="..." className="mr-3 align-self-center" alt="..." />
+                    <div className="media-body">
+                      <h5 className="mt-0">{ item.tenCumRap }</h5>
+                      <p>Address: { item.diaChi }</p>
+                    </div>
+                  </div>
+
                 </a>
               );
             }
             else {
               return (
                 <a
-                  className="nav-link "
+                  className="nav-link border-bottom "
                   id={ `v-pills-${ item.maCumRap }-tab` }
                   data-toggle="pill"
                   href={ `#v-pills-${ item.maCumRap }` }
@@ -37,7 +45,14 @@ export class CinemaClustersTab extends Component {
                   aria-selected="false"
                   key={ i }
                 >
-                  {item.tenCumRap }
+                  {/* {item.tenCumRap } */ }
+                  <div className="media">
+                    <img src="..." className="mr-3 align-self-center" alt="..." />
+                    <div className="media-body">
+                      <h5 className="mt-0">{ item.tenCumRap }</h5>
+                      <p>Address: { item.diaChi }</p>
+                    </div>
+                  </div>
                 </a>
               );
             }

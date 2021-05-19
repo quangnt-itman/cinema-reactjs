@@ -12,11 +12,11 @@ export class Cinemas extends Component {
         <h3>cinemas</h3>
 
         <div className="cinema-systems container">
-          <div className="row">
-            <div className="col-2">
+          <div className="row border py-sm-4">
+            <div className="col-sm-2 border-right pr-sm-0">
               <CinemaSystems />
             </div>
-            <div className="col-10">
+            <div className="col-sm-10">
               <CinemaClusters />
             </div>
           </div>

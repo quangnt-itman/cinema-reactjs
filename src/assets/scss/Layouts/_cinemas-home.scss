@@ -1,0 +1,35 @@
+#cinemas{
+
+
+
+  & .cinema-systems{
+    & .list-group{
+      & .list-group-item {
+        border-style: none;
+        padding: 1vmax 0;
+        text-align: center;
+        // width: 75%;
+        // margin: auto;
+        & > img {
+          max-width: 60px;
+          max-height: 60px;
+          width:5vmax;
+          height:5vmax;
+        }
+      }
+    }
+
+    & .cinema-clusters {
+      height: 100%;
+      & .row {
+        height: 100%;
+      }
+      & .cinema-cluster-col-left {
+        max-height: 30vmax;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        // height:100%;
+      }
+    }
+  }
+}

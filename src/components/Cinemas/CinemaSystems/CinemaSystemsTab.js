@@ -10,7 +10,7 @@ export class CinemaSystemsTab extends Component {
     if ( index === 0 ) {
       return (
         <a
-          className="list-group-item list-group-item-action active"
+          className="list-group-item list-group-item-action border-bottom active"
           id={ `list-${ cinemaSystem.maHeThongRap }-list` }
           data-toggle="list"
           href={ `#v-list-${ cinemaSystem.maHeThongRap }` }
@@ -26,7 +26,7 @@ export class CinemaSystemsTab extends Component {
     else {
       return (
         <a
-          className="list-group-item list-group-item-action "
+          className="list-group-item list-group-item-action border-bottom "
           id={ `list-${ cinemaSystem.maHeThongRap }-list` }
           data-toggle="list"
           href={ `#v-list-${ cinemaSystem.maHeThongRap }` }
@@ -35,7 +35,7 @@ export class CinemaSystemsTab extends Component {
           aria-selected="false"
           onClick={ () => fetchCinemaClusters( cinemaSystem.maHeThongRap ) }
         >
-          { cinemaSystem.maHeThongRap }
+          <img src={ cinemaSystem.logo } alt={ cinemaSystem.biDanh } />
         </a>
       );
     }
