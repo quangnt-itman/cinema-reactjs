@@ -8,12 +8,14 @@ export class CinemaClustersTabContent extends Component {
       <>
         {
           cinemaClusters && cinemaClusters.map( ( item, i ) => {
-            if ( i == 0 ) {
+            if ( i === 0 ) {
               return (
                 <div
-                  class="tab-pane fade show active"
-                  id={ `v-pills-${ item.maCumRap }` } role="tabpanel"
+                  className="tab-pane fade active show"
+                  id={ `v-pills-${ item.maCumRap }` }
+                  role="tabpanel"
                   aria-labelledby={ `v-pills-${ item.maCumRap }-tab` }
+                  key={ i }
                 >
                   {item.tenCumRap }
                 </div>
@@ -22,9 +24,10 @@ export class CinemaClustersTabContent extends Component {
             else {
               return (
                 <div
-                  class="tab-pane fade"
+                  className="tab-pane fade"
                   id={ `v-pills-${ item.maCumRap }` } role="tabpanel"
                   aria-labelledby={ `v-pills-${ item.maCumRap }-tab` }
+                  key={ i }
                 >
                   {item.tenCumRap }
                 </div>

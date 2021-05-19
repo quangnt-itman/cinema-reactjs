@@ -16,15 +16,16 @@ export class CinemaSystemsTabContent extends Component {
           aria-labelledby={ `v-pills-${ cinemaSystem.maHeThongRap }-tab` }>
           {/* {cinemaSystem.tenHeThongRap } */ }
           <div className="cinema-clusters">
-            <div class="row">
-              <div class="col-5">
-                <div class="nav flex-column nav-pills" id={ `v-pills-tab-${ index }` } role="tablist" aria-orientation="vertical">
+            <div className="row">
+              <div className="col-5">
+                <div className="nav flex-column nav-pills" id={ `v-pills-tab-${ index }` } role="tablist" aria-orientation="vertical">
                   {/* { cinemaSystem.tenHeThongRap } */ }
                   <CinemaClustersTab />
+
                 </div>
               </div>
-              <div class="col-7">
-                <div class="tab-content" id={ `v-pills-tabContent-${ index }` }>
+              <div className="col-7">
+                <div className="tab-content" id={ `v-pills-tabContent-${ index }` }>
                   {/* { cinemaSystem.tenHeThongRap } */ }
                   <CinemaClustersTabContent />
                 </div>
@@ -43,16 +44,17 @@ export class CinemaSystemsTabContent extends Component {
           aria-labelledby={ `v-pills-${ cinemaSystem.maHeThongRap }-tab` }>
           {/* {cinemaSystem.tenHeThongRap } */ }
           <div className="cinema-clusters">
-            <div class="row">
-              <div class="col-5">
-                <div class="nav flex-column nav-pills" id={ `v-pills-tab-${ index }` } role="tablist" aria-orientation="vertical">
+            <div className="row">
+              <div className="col-5">
+                <div className="nav flex-column nav-pills" id={ `v-pills-tab-${ index }` } role="tablist" aria-orientation="vertical">
                   {/* { cinemaSystem.tenHeThongRap } */ }
                   <CinemaClustersTab />
+
                 </div>
               </div>
-              <div class="col-7">
-                <div class="tab-content" id={ `v-pills-tabContent-${ index }` }>
-                  {/* { cinemaSystem.tenHeThongRap } */}
+              <div className="col-7">
+                <div className="tab-content" id={ `v-pills-tabContent-${ index }` }>
+                  {/* { cinemaSystem.tenHeThongRap } */ }
                   <CinemaClustersTabContent />
                 </div>
               </div>

@@ -7,13 +7,15 @@ export class CinemaSystemsTab extends Component {
     console.log( this.props );
     let { cinemaSystem, index, fetchCinemaClusters } = this.props;
 
-    if ( index == 0 ) {
+    if ( index === 0 ) {
       return (
         <a
-          className="nav-link active"
-          id={ `v-pills-${ cinemaSystem.maHeThongRap }-tab` }
-          data-toggle="pill" href={ `#v-pills-${ cinemaSystem.maHeThongRap }` }
-          role="tab" aria-controls={ `v-pills-${ cinemaSystem.maHeThongRap }` }
+          className="list-group-item list-group-item-action active"
+          id={ `list-${ cinemaSystem.maHeThongRap }-list` }
+          data-toggle="list"
+          href={ `#v-list-${ cinemaSystem.maHeThongRap }` }
+          role="tab"
+          aria-controls={ cinemaSystem.maHeThongRap }
           aria-selected="true"
           onClick={ () => fetchCinemaClusters( cinemaSystem.maHeThongRap ) }
         >
@@ -24,10 +26,12 @@ export class CinemaSystemsTab extends Component {
     else {
       return (
         <a
-          className="nav-link"
-          id={ `v-pills-${ cinemaSystem.maHeThongRap }-tab` }
-          data-toggle="pill" href={ `#v-pills-${ cinemaSystem.maHeThongRap }` }
-          role="tab" aria-controls={ `v-pills-${ cinemaSystem.maHeThongRap }` }
+          className="list-group-item list-group-item-action "
+          id={ `list-${ cinemaSystem.maHeThongRap }-list` }
+          data-toggle="list"
+          href={ `#v-list-${ cinemaSystem.maHeThongRap }` }
+          role="tab"
+          aria-controls={ cinemaSystem.maHeThongRap }
           aria-selected="false"
           onClick={ () => fetchCinemaClusters( cinemaSystem.maHeThongRap ) }
         >
@@ -39,7 +43,7 @@ export class CinemaSystemsTab extends Component {
 }
 
 const mapStateToProps = ( state ) => ( {
-  
+
 } );
 
 const mapDispatchToProps = dispatch => ( {

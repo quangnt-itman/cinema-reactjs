@@ -13,9 +13,14 @@ export class CinemaClustersTab extends Component {
               return (
                 <a
                   className="nav-link active"
-                  id={ `v-pills-${ item.maCumRap }-tab` } data-toggle="pill"
-                  href={ `#v-pills-${ item.maCumRap }` } role="tab" aria-controls={ `v-pills-${ item.maCumRap }` }
-                  aria-selected="true">
+                  id={ `v-pills-${ item.maCumRap }-tab` }
+                  data-toggle="pill"
+                  href={ `#v-pills-${ item.maCumRap }` }
+                  role="tab"
+                  aria-controls={ `v-pills-${ item.maCumRap }` }
+                  aria-selected="true"
+                  key={ i }
+                >
                   {item.tenCumRap }
                 </a>
               );
@@ -23,10 +28,15 @@ export class CinemaClustersTab extends Component {
             else {
               return (
                 <a
-                  className="nav-link"
-                  id={ `v-pills-${ item.maCumRap }-tab` } data-toggle="pill"
-                  href={ `#v-pills-${ item.maCumRap }` } role="tab" aria-controls={ `v-pills-${ item.maCumRap }` }
-                  aria-selected="false">
+                  className="nav-link "
+                  id={ `v-pills-${ item.maCumRap }-tab` }
+                  data-toggle="pill"
+                  href={ `#v-pills-${ item.maCumRap }` }
+                  role="tab"
+                  aria-controls={ `v-pills-${ item.maCumRap }` }
+                  aria-selected="false"
+                  key={ i }
+                >
                   {item.tenCumRap }
                 </a>
               );
@@ -42,8 +52,7 @@ const mapStateToProps = ( state ) => ( {
   cinemaClusters: state.cinemaReducers.fetchCinemaClustersReducers.data
 } );
 
-const mapDispatchToProps = {
-
-};
+const mapDispatchToProps = dispatch => ( {
+} );
 
 export default connect( mapStateToProps, mapDispatchToProps )( CinemaClustersTab );;
