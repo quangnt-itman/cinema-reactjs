@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { actFetchCinemaClusters } from '../CinemaClusters/modules/actions';
+import { actFetchCinemaClusters } from '../../../services/QuanLyRap/LayThongTinCumRapTheoHeThong/actions';
 
 export class CinemaSystemsTab extends Component {
   render () {
@@ -19,7 +19,7 @@ export class CinemaSystemsTab extends Component {
           aria-selected="true"
           onClick={ () => fetchCinemaClusters( cinemaSystem.maHeThongRap ) }
         >
-          { cinemaSystem.maHeThongRap }
+          <img src={ cinemaSystem.logo } alt={ cinemaSystem.biDanh } />
         </a>
       );
     }

@@ -13,7 +13,7 @@ export class CinemaClusters extends Component {
               <CinemaClustersTab />
             </div>
           </div>
-          <div className="col-sm-7 border-left">
+          <div className="col-sm-7 border-left cinema-cluster-col-right">
             <div className="tab-content" id="v-pills-tabContent">
               <CinemaClustersTabContent />
             </div>

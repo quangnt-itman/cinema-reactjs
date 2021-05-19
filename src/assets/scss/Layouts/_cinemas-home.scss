@@ -24,12 +24,13 @@
       & .row {
         height: 100%;
       }
-      & .cinema-cluster-col-left {
-        max-height: 30vmax;
+      & .cinema-cluster-col-left, .cinema-cluster-col-right {
+        max-height: 34vmax;
         overflow-y: scroll;
         overflow-x: hidden;
         // height:100%;
       }
+
     }
   }
 }

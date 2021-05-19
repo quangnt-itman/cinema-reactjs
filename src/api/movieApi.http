@@ -1,0 +1,28 @@
+# TQuanLyPhim
+
+# /api/QuanLyPhim/LayDanhSachPhim / ( maNhom ) / ( tenPhim )
+GET https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhim
+GET https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP01
+GET https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP01&tenPhim=B%E1%BB%91%20Gi%C3%A0
+
+
+# QuanLyRap
+
+# /api/QuanLyRap/LayThongTinHeThongRap / ( maHeThongRap )
+GET https://movie0706.cybersoft.edu.vn/api/QuanLyRap/LayThongTinHeThongRap
+GET https://movie0706.cybersoft.edu.vn/api/QuanLyRap/LayThongTinHeThongRap?maHeThongRap=BHDStar
+
+
+# /api/QuanLyRap/LayThongTinCumRapTheoHeThong / ( maHeThongRap )
+GET https://movie0706.cybersoft.edu.vn/api/QuanLyRap/LayThongTinCumRapTheoHeThong?maHeThongRap=MegaGS
+
+
+# /api/QuanLyRap/LayThongTinLichChieuHeThongRap / ( maHeThongRap ) / ( maNhom )
+GET https://movie0706.cybersoft.edu.vn/api/QuanLyRap/LayThongTinLichChieuHeThongRap
+GET https://movie0706.cybersoft.edu.vn/api/QuanLyRap/LayThongTinLichChieuHeThongRap?maHeThongRap=BHDStar
+GET https://movie0706.cybersoft.edu.vn/api/QuanLyRap/LayThongTinLichChieuHeThongRap?maHeThongRap=BHDStar&maNhom=GP01
+
+
+# /api/QuanLyRap/LayThongTinLichChieuPhim/ maPhim
+GET https://movie0706.cybersoft.edu.vn/api/QuanLyRap/LayThongTinLichChieuPhim?MaPhim=1314
+

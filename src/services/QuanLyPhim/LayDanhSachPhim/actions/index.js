@@ -1,5 +1,5 @@
 import axios from "axios";
-import { MOVIE_FETCH_MOVIES_FAILED, MOVIE_FETCH_MOVIES_REQUEST, MOVIE_FETCH_MOVIES_SUCCESS } from "./constants";
+import { MOVIE_FETCH_MOVIES_FAILED, MOVIE_FETCH_MOVIES_REQUEST, MOVIE_FETCH_MOVIES_SUCCESS } from "./../constants";
 
 const actFetchMoviesRequest = () => ( {
   type: MOVIE_FETCH_MOVIES_REQUEST

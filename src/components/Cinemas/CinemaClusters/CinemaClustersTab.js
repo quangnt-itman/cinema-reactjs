@@ -23,7 +23,7 @@ export class CinemaClustersTab extends Component {
                 >
                   {/* {item.tenCumRap } */ }
                   <div className="media">
-                    <img src="..." className="mr-3 align-self-center" alt="..." />
+                    {/* <img src="..." className="mr-3 align-self-center" alt="..." /> */}
                     <div className="media-body">
                       <h5 className="mt-0">{ item.tenCumRap }</h5>
                       <p>Address: { item.diaChi }</p>
@@ -47,7 +47,7 @@ export class CinemaClustersTab extends Component {
                 >
                   {/* {item.tenCumRap } */ }
                   <div className="media">
-                    <img src="..." className="mr-3 align-self-center" alt="..." />
+                    {/* <img src="..." className="mr-3 align-self-center" alt="..." /> */}
                     <div className="media-body">
                       <h5 className="mt-0">{ item.tenCumRap }</h5>
                       <p>Address: { item.diaChi }</p>

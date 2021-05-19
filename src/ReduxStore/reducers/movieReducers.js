@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import fetchMoviesReducers from "../../components/Movies/modules/reducers";
+import fetchMoviesReducers from './../../services/QuanLyPhim/LayDanhSachPhim/reducers'
 
 const movieReducers = combineReducers( {
   fetchMoviesReducers

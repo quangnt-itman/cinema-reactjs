@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import { fetchCinemaSystemsReducers } from "../../components/Cinemas/CinemaSystems/modules/reducers";
-import fetchCinemaClustersReducers from '../../components/Cinemas/CinemaClusters/modules/reducers';
+import { fetchCinemaSystemsReducers } from "../../services/QuanLyRap/LayThongTinHeThongRap/reducers";
+import fetchCinemaClustersReducers from '../../services/QuanLyRap/LayThongTinCumRapTheoHeThong/reducers';
 const cinemaReducers = combineReducers( {
   fetchCinemaSystemsReducers,
   fetchCinemaClustersReducers,

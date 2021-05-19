@@ -1,26 +1,28 @@
-import * as types from './constants';
+import { MOVIE_FETCH_MOVIES_FAILED, MOVIE_FETCH_MOVIES_REQUEST, MOVIE_FETCH_MOVIES_SUCCESS } from "./../constants";
 
 let initialState = {
   loading: false,
   data: null,
-  error: null,
+  error: null
 };
 
-const movieReducers = ( state = initialState, action ) => {
+const fetchMoviesReducers = ( state = initialState, action ) => {
+
   switch ( action.type ) {
-    case types.R_MOVIE_REQUEST:
+    case MOVIE_FETCH_MOVIES_REQUEST:
       state.loading = true;
       state.data = null;
       state.error = null;
       return { ...state };
 
-    case types.R_MOVIE_SUCCESS:
+    case MOVIE_FETCH_MOVIES_SUCCESS:
       state.loading = false;
       state.data = action.data;
       state.error = null;
       return { ...state };
 
-    case types.R_MOVIE_FAILED:
+    case MOVIE_FETCH_MOVIES_FAILED:
+      console.log( 'false' );
       state.loading = false;
       state.data = null;
       state.error = action.error;
@@ -31,6 +33,4 @@ const movieReducers = ( state = initialState, action ) => {
   }
 };
 
-
-
-export { movieReducers };
+export default fetchMoviesReducers;

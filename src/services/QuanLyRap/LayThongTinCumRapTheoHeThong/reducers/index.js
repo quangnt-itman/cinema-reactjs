@@ -1,28 +1,26 @@
-import { MOVIE_FETCH_MOVIES_FAILED, MOVIE_FETCH_MOVIES_REQUEST, MOVIE_FETCH_MOVIES_SUCCESS } from "./constants";
+import { CINEMA_FETCH_CINEMA_CLUSTERS_FAILED, CINEMA_FETCH_CINEMA_CLUSTERS_REQUEST, CINEMA_FETCH_CINEMA_CLUSTERS_SUCCESS } from "./../constants";
 
-let initialState = {
+const initialState = {
   loading: false,
   data: null,
   error: null
 };
 
-const fetchMoviesReducers = ( state = initialState, action ) => {
-
+const fetchCinemaClustersReducers = ( state = initialState, action ) => {
   switch ( action.type ) {
-    case MOVIE_FETCH_MOVIES_REQUEST:
+    case CINEMA_FETCH_CINEMA_CLUSTERS_REQUEST:
       state.loading = true;
       state.data = null;
       state.error = null;
       return { ...state };
 
-    case MOVIE_FETCH_MOVIES_SUCCESS:
+    case CINEMA_FETCH_CINEMA_CLUSTERS_SUCCESS:
       state.loading = false;
       state.data = action.data;
       state.error = null;
       return { ...state };
 
-    case MOVIE_FETCH_MOVIES_FAILED:
-      console.log( 'false' );
+    case CINEMA_FETCH_CINEMA_CLUSTERS_FAILED:
       state.loading = false;
       state.data = null;
       state.error = action.error;
@@ -33,4 +31,4 @@ const fetchMoviesReducers = ( state = initialState, action ) => {
   }
 };
 
-export default fetchMoviesReducers;
+export default fetchCinemaClustersReducers;

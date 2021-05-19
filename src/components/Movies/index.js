@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import MovieCard from '../MovieCard';
-import { actFetchMovies } from './modules/actions';
+import MovieCard from './MovieCard';
+import { actFetchMovies } from './../../services/QuanLyPhim/LayDanhSachPhim/actions';
 import { slickConfigure } from '../../assets/js/libs-control';
 
 // import { actFetchMovies } from '../../ReduxStore/reducers/modules/movieReducers/actions';

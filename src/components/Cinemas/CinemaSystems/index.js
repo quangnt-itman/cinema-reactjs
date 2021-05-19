@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { actFetchCinemaClusters } from '../CinemaClusters/modules/actions';
-import CinemaSystemsTab  from './CinemaSystemsTab';
-import { actFetchCinemaSystems } from './modules/actions';
+
+import CinemaSystemsTab from './CinemaSystemsTab';
+import { actFetchCinemaSystems } from './../../../services/QuanLyRap/LayThongTinHeThongRap/actions';
 
 export class CinemaSystems extends Component {
   componentDidMount () {
     this.props.fetchCinemaSystems();
   }
   render () {
-    let { cinemaSystems,  } = this.props;
+    let { cinemaSystems, } = this.props;
 
     return (
       <div className="cinema-systems">
         <div className="list-group" id="list-tab" role="tablist">
           {
             cinemaSystems && cinemaSystems.map( ( item, index ) => (
-              <CinemaSystemsTab cinemaSystem={ item } key={ index } />
+              <CinemaSystemsTab cinemaSystem={ item } key={ index } index={ index } />
             )
             )
           }
