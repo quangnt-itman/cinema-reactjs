@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { actLayThongTinLichChieuPhim } from '../../../services/QuanLyRap/LayThongTinLichChieuPhim/actions';
 
 export class CinemaClusterMedia extends Component {
   render () {
@@ -25,10 +26,12 @@ export class CinemaClusterMedia extends Component {
           ( danhSachPhimTheoMaCumRap && danhSachPhimTheoMaCumRap.length > 0 ) ? (
             danhSachPhimTheoMaCumRap[ 0 ].danhSachPhim.map( ( item, index ) => (
 
-              <div className="card mb-3" style={ { maxWidth: 540 } } key={ index }>
+              <div className="card mb-3" style={ { maxWidth: 540 } } key={ index }
+                onLoad={ () => this.props.layThongTinLichChieuPhim( item.maPhim ) }
+              >
                 <div className="row no-gutters">
                   <div className="col-md-4">
-                    <img src={ item.hinhAnh } className="card-img" alt={item.maPhim} />
+                    <img src={ item.hinhAnh } className="card-img" alt={ item.maPhim } />
                   </div>
                   <div className="col-md-8">
                     <div className="card-body">
@@ -50,11 +53,12 @@ export class CinemaClusterMedia extends Component {
 }
 
 const mapStateToProps = ( state ) => ( {
-  lichChieuHeThongRap: state.cinemaReducers.layThongTinLichChieuHeThongRapReducers.data
+  lichChieuHeThongRap: state.cinemaReducers.layThongTinLichChieuHeThongRapReducers.data,
+  lichChieuPhim: state.cinemaReducers.layThongTinLichChieuPhimReducers.data
 } );
 
 const mapDispatchToProps = dispatch => ( {
-
+  layThongTinLichChieuPhim: ( maPhim ) => dispatch( actLayThongTinLichChieuPhim( maPhim ) )
 } );
 
 
