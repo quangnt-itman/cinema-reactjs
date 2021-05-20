@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import CinemaClusterMedia from './CinemaClusterMedia';
 
 export class CinemaClustersTabContent extends Component {
   render () {
@@ -17,7 +18,10 @@ export class CinemaClustersTabContent extends Component {
                   aria-labelledby={ `v-pills-${ item.maCumRap }-tab` }
                   key={ i }
                 >
-                  {item.tenCumRap }
+                  {/* {item.tenCumRap } */ }
+                  <div className="card-list">
+                    <CinemaClusterMedia cinemaCluster={ item } />
+                  </div>
                 </div>
               );
             }
@@ -30,51 +34,9 @@ export class CinemaClustersTabContent extends Component {
                   key={ i }
                 >
                   {/* {item.tenCumRap } */ }
-                  <ul className="list-unstyled">
-                    <li className="media">
-                      <img src="..." className="mr-3" alt="..." />
-                      <div className="media-body">
-                        <h5 className="mt-0 mb-1">List-based media object</h5>
-      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-    </div>
-                    </li>
-                    <li className="media my-4">
-                      <img src="..." className="mr-3" alt="..." />
-                      <div className="media-body">
-                        <h5 className="mt-0 mb-1">List-based media object</h5>
-      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-    </div>
-                    </li>
-                    <li className="media">
-                      <img src="..." className="mr-3" alt="..." />
-                      <div className="media-body">
-                        <h5 className="mt-0 mb-1">List-based media object</h5>
-      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-    </div>
-                    </li>
-                    <li className="media">
-                      <img src="..." className="mr-3" alt="..." />
-                      <div className="media-body">
-                        <h5 className="mt-0 mb-1">List-based media object</h5>
-      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-    </div>
-                    </li>
-                    <li className="media">
-                      <img src="..." className="mr-3" alt="..." />
-                      <div className="media-body">
-                        <h5 className="mt-0 mb-1">List-based media object</h5>
-      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-    </div>
-                    </li>
-                    <li className="media">
-                      <img src="..." className="mr-3" alt="..." />
-                      <div className="media-body">
-                        <h5 className="mt-0 mb-1">List-based media object</h5>
-      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-    </div>
-                    </li>
-                  </ul>
-
+                  <div className="card-list">
+                    <CinemaClusterMedia cinemaCluster={ item } />
+                  </div>
                 </div>
               );
             }
