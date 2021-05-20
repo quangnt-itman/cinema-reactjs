@@ -21,7 +21,6 @@ export class CinemaSystemsTab extends Component {
           onClick={ () => {
             fetchCinemaClusters( cinemaSystem.maHeThongRap );
             layThongTinLichChieuHeThongRap( cinemaSystem.maHeThongRap, "GP01" );
-
           } }
         >
           <img src={ cinemaSystem.logo } alt={ cinemaSystem.biDanh } />
@@ -38,7 +37,10 @@ export class CinemaSystemsTab extends Component {
           role="tab"
           aria-controls={ cinemaSystem.maHeThongRap }
           aria-selected="false"
-          onClick={ () => fetchCinemaClusters( cinemaSystem.maHeThongRap ) }
+          onClick={ () => {
+            fetchCinemaClusters( cinemaSystem.maHeThongRap );
+            layThongTinLichChieuHeThongRap( cinemaSystem.maHeThongRap, "GP01" );
+          } }
         >
           <img src={ cinemaSystem.logo } alt={ cinemaSystem.biDanh } />
         </a>
