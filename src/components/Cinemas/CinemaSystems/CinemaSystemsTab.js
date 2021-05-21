@@ -3,10 +3,15 @@ import { connect } from 'react-redux';
 import { actFetchCinemaClusters } from '../../../services/QuanLyRap/LayThongTinCumRapTheoHeThong/actions';
 import { actLayThongTinLichChieuHeThongRap } from '../../../services/QuanLyRap/LayThongTinLichChieuHeThongRap/actions';
 
+/**
+ * * cinemaSystem : tung He Thong Rap
+ */
+
 export class CinemaSystemsTab extends Component {
   render () {
-    console.log( this.props );
+    // console.log( this.props );
     let { cinemaSystem, index, fetchCinemaClusters, layThongTinLichChieuHeThongRap } = this.props;
+
 
     if ( index === 0 ) {
       return (
