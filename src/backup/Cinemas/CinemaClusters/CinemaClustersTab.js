@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { actLayThongTinLichChieuPhim } from '../../../services/QuanLyRap/LayThongTinLichChieuPhim/actions';
+import { actLayThongTinLichChieuPhim } from '../../../services/QuanLyRap/LayLichChieuPhim/actions';
 
 /**
  * * item la tung cum rap
@@ -8,8 +8,8 @@ import { actLayThongTinLichChieuPhim } from '../../../services/QuanLyRap/LayThon
 export class CinemaClustersTab extends Component {
   render () {
     let { cinemaClusters, lichChieuHeThongRap, layThongTinLichChieuPhim } = this.props;
-    console.log( 'cinemaClusters', cinemaClusters );
-    console.log( 'lichChieuHeThongRap', lichChieuHeThongRap );
+    // console.log( 'cinemaClusters', cinemaClusters );
+    // console.log( 'lichChieuHeThongRap', lichChieuHeThongRap );
     let lstCumRap;
     let danhSachPhim;
 
@@ -17,14 +17,15 @@ export class CinemaClustersTab extends Component {
     return (
       <>
         {
-          cinemaClusters && cinemaClusters.map( ( item, i ) => {
+          ( cinemaClusters ) &&
+          ( cinemaClusters.map( ( item, i ) => {
             if ( lichChieuHeThongRap && lichChieuHeThongRap.length > 0 ) {
               lstCumRap = lichChieuHeThongRap[ 0 ].lstCumRap.filter( ( cumRap ) => cumRap.maCumRap === item.maCumRap );
-              console.log( 'lstCumRap', lstCumRap );
+              // console.log( 'lstCumRap', lstCumRap );
               if ( lstCumRap && lstCumRap.length > 0 ) {
                 danhSachPhim = lstCumRap[ 0 ].danhSachPhim;
               }
-              console.log( 'danhSachPhim', danhSachPhim );
+              // console.log( 'danhSachPhim', danhSachPhim );
 
               if ( i === 0 ) {
                 return (
@@ -76,7 +77,7 @@ export class CinemaClustersTab extends Component {
                 );
               }
             }
-          } )
+          } ) )
         }
       </>
     );
@@ -94,4 +95,4 @@ const mapDispatchToProps = dispatch => ( {
   }
 } );
 
-export default connect( mapStateToProps, mapDispatchToProps )( CinemaClustersTab );;
+export default connect( mapStateToProps, mapDispatchToProps )( CinemaClustersTab );

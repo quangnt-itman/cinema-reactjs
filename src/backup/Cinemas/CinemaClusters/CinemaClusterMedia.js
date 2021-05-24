@@ -1,27 +1,15 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { actLayThongTinLichChieuPhim } from '../../../services/QuanLyRap/LayThongTinLichChieuPhim/actions';
+// import { actLayThongTinLichChieuPhim } from '../../../services/QuanLyRap/LayThongTinLichChieuPhim/actions';
 
 export class CinemaClusterMedia extends Component {
   lstLichChieuPhimCumRap = [];
   render () {
-    let { cinemaCluster, lstCumRap, lichChieuPhim } = this.props;
+    let { lichChieuPhim } = this.props;
     this.lstLichChieuPhimCumRap.push( lichChieuPhim );
 
-    console.log( 'cinemaCluster', cinemaCluster );
-    console.log( 'lstCumRap', lstCumRap );
-
-    // ( lstCumRap ) && (
-    //   lstCumRap.forEach( cumRap => {
-    //     if ( cumRap.maCumRap === cinemaCluster.maCumRap ) {
-    //       lstLichChieuPhimCumRap.push( lichChieuPhim );
-    //     }
-    //   } )
-    // );
-
-    console.log( 'lstLichChieuPhimCumRap', this.lstLichChieuPhimCumRap );
-
+    // console.log( 'lstLichChieuPhimCumRap', this.lstLichChieuPhimCumRap );
 
     return (
       <>
@@ -29,8 +17,7 @@ export class CinemaClusterMedia extends Component {
           ( this.lstLichChieuPhimCumRap && this.lstLichChieuPhimCumRap.length > 0 ) ? (
             this.lstLichChieuPhimCumRap.map( ( item, index ) => (
 
-              <div className="card mb-3" style={ { maxWidth: 540 } } key={ index }
-              >
+              <div className="card mb-3" style={ { maxWidth: 540 } } key={ index }>
                 <div className="row no-gutters">
                   <div className="col-md-4">
                     <img src={ item ? item.hinhAnh : 'none' } className="card-img" alt={ item ? item.maPhim : 'none' } />

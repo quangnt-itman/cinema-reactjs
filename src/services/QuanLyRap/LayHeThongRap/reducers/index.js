@@ -31,4 +31,4 @@ const fetchCinemaSystemsReducers = ( state = initialState, action ) => {
   }
 };
 
-export { fetchCinemaSystemsReducers };
+export default fetchCinemaSystemsReducers ;

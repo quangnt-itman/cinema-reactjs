@@ -1,15 +1,15 @@
 import { combineReducers } from "redux";
-import { fetchCinemaSystemsReducers } from "../../services/QuanLyRap/LayThongTinHeThongRap/reducers";
-import fetchCinemaClustersReducers from '../../services/QuanLyRap/LayThongTinCumRapTheoHeThong/reducers';
-import layThongTinLichChieuHeThongRapReducers from './../../services/QuanLyRap/LayThongTinLichChieuHeThongRap/reducers';
-import layThongTinLichChieuPhimReducers from "../../services/QuanLyRap/LayThongTinLichChieuPhim/reducers";
+import fetchCinemaSystemsReducers from "../../services/QuanLyRap/LayHeThongRap/reducers";
+import fetchCinemaClustersReducers from '../../services/QuanLyRap/LayCumRapTheoHeThong/reducers';
+import layLichChieuHeThongRapReducers from '../../services/QuanLyRap/LayLichChieuHeThongRap/reducers';
+import layLichChieuPhimReducers from "../../services/QuanLyRap/LayLichChieuPhim/reducers";
 
 
 const cinemaReducers = combineReducers( {
   fetchCinemaSystemsReducers,
   fetchCinemaClustersReducers,
-  layThongTinLichChieuHeThongRapReducers,
-  layThongTinLichChieuPhimReducers,
+  layLichChieuHeThongRapReducers,
+  layLichChieuPhimReducers,
 } );
 
 export default cinemaReducers;

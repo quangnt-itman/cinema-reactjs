@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { actFetchCinemaClusters } from '../../../services/QuanLyRap/LayThongTinCumRapTheoHeThong/actions';
-import { actLayThongTinLichChieuHeThongRap } from '../../../services/QuanLyRap/LayThongTinLichChieuHeThongRap/actions';
+import { actLayThongTinLichChieuHeThongRap } from '../../../services/QuanLyRap/LayLichChieuHeThongRap/actions';
 
 /**
  * * cinemaSystem : tung He Thong Rap

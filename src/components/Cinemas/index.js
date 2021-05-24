@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import CinemaClusters from './CinemaClusters';
-import CinemaSystems from './CinemaSystems';
+import CumRap from './CumRap';
+import HeThongRap from './HeThongRap';
+import LichChieuPhim from './LichChieuPhim';
 
 
 export class Cinemas extends Component {
@@ -11,16 +12,21 @@ export class Cinemas extends Component {
       <div id="cinemas">
         <h3>cinemas</h3>
 
-        <div className="cinema-systems container">
-          <div className="row border py-sm-4">
-            <div className="col-sm-2 border-right pr-sm-0">
-              <CinemaSystems />
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-2">
+              lstHeThongRap
+              <HeThongRap />
             </div>
-            <div className="col-sm-10">
-              <CinemaClusters />
+            <div className="col-sm-4">
+              lstCupRap
+              <CumRap />
+            </div>
+            <div className="col-sm-6">
+              lstLichChieuPhim
+              <LichChieuPhim />
             </div>
           </div>
-
         </div>
       </div>
     );
