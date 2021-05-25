@@ -1,4 +1,91 @@
 footer {
-  height: 1000px;
-  background-color: green;
+  margin-top: 50px;
+  background-color: #1a1a1a;
+  padding: 40px 0 20px 0;
+}
+
+footer .copyright img {
+  width: 130px;
+}
+
+footer .copyright p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #a0a3a7;
+  margin: 10px 20px;
+}
+
+footer hr {
+  border-top: 1px solid #8f8e8b;
+}
+
+footer h5 {
+  position: relative;
+  padding-left: 15px;
+}
+
+footer h5:before {
+  background-color: #f26b38;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 4px;
+}
+
+footer i {
+  margin-right: 10px;
+}
+
+footer .footer-items h5 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #a0a3a7;
+  margin-bottom: 20px;
+}
+
+footer .footer-items .contact-mxh li {
+  display: inline;
+}
+
+footer .footer-items .contact-mxh li a {
+  font-size: 2rem;
+  margin-left: 10px;
+  transition: all 0.5s;
+}
+
+footer .footer-items .contact-mxh #facebook:hover {
+  color: blue !important;
+}
+
+footer .footer-items .contact-mxh #youtube:hover {
+  color: red !important;
+}
+
+footer .footer-items .contact-mxh #instagram:hover {
+  color: magenta !important;
+}
+
+footer .footer-items li {
+  margin-top: 10px;
+}
+
+footer .footer-items li a {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #a0a3a7;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.5s;
+}
+
+footer .footer-items li a:hover {
+  color: tomato;
+}
+
+@media screen and (max-width: 992px) {
+  footer #tenCty {
+    display: none;
+  }
 }

@@ -36,7 +36,13 @@ export const CumRap = ( props ) => {
               aria-controls={ `${ cumRap.maCumRap }` }
               onClick={ () => layLichChieuPhim( danhSachPhim ) }
             >
-              {cumRap.tenCumRap }
+              <div className="media">
+                <img src={ lichChieuHeThongRap !== null && lichChieuHeThongRap[ 0 ].logo } width="30px" height="30px" className="mr-3 align-self-center" alt={ cumRap.maCumRap } />
+                <div className="media-body">
+                  <h5 className="mt-0">{ cumRap.tenCumRap }</h5>
+                  <p>Address: { cumRap.diaChi }</p>
+                </div>
+              </div>
             </a>
           );
         }
