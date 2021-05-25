@@ -1,0 +1,10 @@
+#box-booking {
+  & .box-phim {
+    & > div.dropdown-menu.menu-phim{
+      max-height: 22vmax;
+      max-width: 22vmax;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+  }
+}

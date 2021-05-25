@@ -98,7 +98,7 @@ export class Footer extends Component {
               <ul className="list-unstyled contact-mxh">
                 <li>
                   <a href="#" id="facebook">
-                    <i class="fab fa-facebook"></i>
+                    <i className="fab fa-facebook"></i>
                   </a>
                 </li>
                 <li>
@@ -133,7 +133,7 @@ export class Footer extends Component {
           <div className="copyright d-flex justify-content-center align-items-center">
             <i>
               <p id="tenCty">
-                <i class="fa fa-copyright"></i> Dự án cuối khóa CyberSoft của
+                <i className="fa fa-copyright"></i> Dự án cuối khóa CyberSoft của
                 Nguyen Thien Quang và Le Nhu Thong
               </p>
             </i>
