@@ -18,10 +18,10 @@ export class BoxPhim extends Component {
     let { movies } = this.props;
     return (
       <div className="dropdown box-phim">
-        <button className="btn button-transparent btn-block dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button className="btn button-transparent btn-block dropdown-toggle" type="button" id="dropdownMenuPhim" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           { this.state.tenPhim }
         </button>
-        <div className="dropdown-menu menu-phim" aria-labelledby="dropdownMenu2">
+        <div className="dropdown-menu menu-phim" aria-labelledby="dropdownMenuPhim">
           {
             movies ? (
               movies.map( ( movie, index ) => ( <button key={ index } className="dropdown-item" type="button" onClick={ () => this.handlePhim( movie ) }>{ movie.tenPhim }</button> ) )

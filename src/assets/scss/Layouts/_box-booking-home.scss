@@ -1,5 +1,8 @@
 #box-booking {
   & .box-phim {
+    & button#dropdownMenuPhim{
+      overflow: hidden;
+    }
     & > div.dropdown-menu.menu-phim{
       max-height: 22vmax;
       max-width: 22vmax;

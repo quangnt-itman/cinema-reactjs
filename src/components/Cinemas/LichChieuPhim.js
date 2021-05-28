@@ -1,42 +1,49 @@
-import React from 'react';
+import { useState } from 'react';
 import { connect } from 'react-redux';
 import PhimCard from './PhimCard';
 
 export const LichChieuPhim = ( props ) => {
-  let { lstCumRap } = props;
-  // let { phimLichChieu } = props;
-  // console.log( 'lstCumRap', lstCumRap );
-  // console.log( 'phimLichChieu', phimLichChieu );
+
+  let { cumRapClicked, lstCumRapTheoHeThong } = props;
+  let danhSachPhim;
+  if ( cumRapClicked && lstCumRapTheoHeThong ) {
+    let cumRapHeThong = lstCumRapTheoHeThong.find( item => item.maCumRap === cumRapClicked.maCumRap );
+    danhSachPhim = cumRapHeThong.danhSachPhim;
+  }
+
+  console.log( 'danhSachPhim', danhSachPhim );
+
+
 
   return (
+
     <div className="tab-content lich-chieu-phim" id="nav-tabContent">
       {
-        lstCumRap ?
-          lstCumRap.map( ( cumRap, index ) => (
+        danhSachPhim ?
+          danhSachPhim.map( ( phim, index ) => (
             <div
               key={ index }
-              className="tab-pane fade "
-              id={ `list-${ cumRap.maCumRap }` } role="tabpanel"
-              aria-labelledby={ `list-${ cumRap.maCumRap }-list` }
+              className="tab-pane fade show active"
+              id={ `list-${ cumRapClicked.maCumRap }` } role="tabpanel"
+              aria-labelledby={ `list-${ cumRapClicked.maCumRap }-list` }
             >
-              {/* {cumRap.tenCumRap } */ }
-              <PhimCard cumRap={ cumRap } />
+              {/* {phim.tenPhim } */ }
+              <PhimCard phim={ phim } index={ index } />
             </div>
           ) ) : 'khong co lich chieu phim'
       }
     </div>
-
   );
 };
 
 const mapStateToProps = ( state ) => ( {
-  lstCumRap: state.cinemaReducers.fetchCinemaClustersReducers.data,
-  // phimLichChieu: state.cinemaReducers.layLichChieuPhimReducers.data
+  cumRapClicked: state.cinemaReducers.cinemaStoreReducers.cumRapClicked,
+  lstCumRapTheoHeThong: state.cinemaReducers.cinemaStoreReducers.lstCumRapTheoHeThong,
 } );
 
-const mapDispatchToProps = {
+const mapDispatchToProps = dispatch => ( {
 
-};
+} );
 
 export default connect( mapStateToProps, mapDispatchToProps )( LichChieuPhim );
 
