@@ -29,6 +29,7 @@ export class PhimCard extends Component {
 
 
 const mapStateToProps = ( state ) => ( {
+  
 } );
 
 const mapDispatchToProps = {

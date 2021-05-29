@@ -30,7 +30,6 @@ export class Movies extends Component {
               <div className="nav nav-tabs" id="nav-movies-home-tab" role="tablist">
                 <a className="nav-item nav-link active" id="nav-playing-movies-tab" data-toggle="tab" href="#nav-playing-movies" role="tab" aria-controls="nav-playing-movies" aria-selected="true">Playing Movies</a>
                 <a className="nav-item nav-link" id="nav-coming-soon-movies-tab" data-toggle="tab" href="#nav-coming-soon-movies" role="tab" aria-controls="nav-coming-soon-movies" aria-selected="false">Coming Soon Movies</a>
-                <a className="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
               </div>
             </nav>
             <div className="tab-content" id="nav-tabContent">
@@ -46,7 +45,6 @@ export class Movies extends Component {
                 </div>
               </div>
               <div className="tab-pane fade" id="nav-coming-soon-movies" role="tabpanel" aria-labelledby="nav-coming-soon-movies-tab">Comming Soon Movies</div>
-              <div className="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
             </div>
           </div>
         </div>
