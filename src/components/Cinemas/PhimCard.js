@@ -1,5 +1,10 @@
+import moment from 'moment';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { NavLink } from 'react-router-dom';
+
+let current = moment( "2020-09-02T11:13:13" ).format( 'a' );
+console.log( current );
 
 export class PhimCard extends Component {
   render () {
@@ -15,8 +20,41 @@ export class PhimCard extends Component {
               <div className="col-md-8">
                 <div className="card-body">
                   <h5 className="card-title">{ phim.tenPhim }</h5>
-                  <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                  <p className="card-text">
+                    <b>
+                      <i class="fa fa-clock"></i> Thời lượng :{ " " }
+                    </b>
+                    <span>120 phút</span>
+                  </p>
+                  <div className="lich-chieu-phim row">
+                    {
+                      phim.lstLichChieuTheoPhim.map( ( item, index ) => {
+                        if ( moment( item.ngayChieuGioChieu ).format( "DD.MM" ) === "01.01" ) {
+                          return (
+                            <a
+                              key={ index }
+                              href={ `/booking/${ item.maLichChieu }` }
+                              className="btn btn-outline-warning mb-2"
+                            >
+                              <small className="text_Green">
+                                <b>
+                                  { moment( item.ngayChieuGioChieu ).format(
+                                    "hh:mm A"
+                                  ) }
+                                </b>
+                              </small>
+                              {"~" }
+                              <span style={ { fontSize: "12px" } }>
+                                { moment( item.ngayChieuGioChieu )
+                                  .add( 2, "hours" )
+                                  .format( "hh:mm A" ) }
+                              </span>
+                            </a>
+                          );
+                        }
+                      } )
+                    }
+                  </div>
                 </div>
               </div>
             </div>
@@ -29,7 +67,7 @@ export class PhimCard extends Component {
 
 
 const mapStateToProps = ( state ) => ( {
-  
+
 } );
 
 const mapDispatchToProps = {

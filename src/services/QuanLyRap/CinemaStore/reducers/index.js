@@ -16,6 +16,7 @@ const cinemaStoreReducers = ( state = initialState, action ) => {
       lstCumRapTheoHeThong.push( action.cumRapTheoHeThong );
       state.lstCumRapTheoHeThong = lstCumRapTheoHeThong;
       return { ...state };
+      
 
     default:
       return { ...state };

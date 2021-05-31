@@ -45,7 +45,7 @@ const mapStateToProps = ( state ) => ( {
 const mapDispatchToProps = dispatch => ( {
   layLstHeThongRap: () => dispatch( actFetchCinemaSystems() ),
   layLstCumRap: ( maHeThongRap ) => dispatch( actFetchCinemaClusters( maHeThongRap ) ),
-  layLichChieuHeThongRap: ( maHeThongRap ) => dispatch( actLayLichChieuHeThongRap( maHeThongRap ) )
+  layLichChieuHeThongRap: ( maHeThongRap ) => dispatch( actLayLichChieuHeThongRap( maHeThongRap ) ),
 } );
 
 export default connect( mapStateToProps, mapDispatchToProps )( HeThongRap );
