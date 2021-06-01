@@ -1,13 +1,15 @@
 // import logo from './logo.svg';
-import { BrowserRouter, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
+import Auth from './pages/Auth';
+import PageNotFound from './pages/PageNotFound';
 import { routesHome } from './routes';
 import HomeTemplate from './templates/HomeTemplate';
 
 
 
 function App () {
-  
+
   const showHome = routes => (
     routes.map( ( item, index ) => (
       <HomeTemplate
@@ -23,6 +25,9 @@ function App () {
       <BrowserRouter>
         <Switch>
           { showHome( routesHome ) }
+
+          <Route path="/auth" component={ Auth } />
+          <Route path="" component={ PageNotFound } />
         </Switch>
       </BrowserRouter>
     </div>

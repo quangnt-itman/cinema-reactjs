@@ -1,4 +1,4 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import { connect } from 'react-redux';
 import PhimCard from './PhimCard';
 
@@ -11,7 +11,7 @@ export const LichChieuPhim = ( props ) => {
     danhSachPhim = cumRapHeThong.danhSachPhim;
   }
 
-  console.log( 'danhSachPhim', danhSachPhim );
+  // console.log( 'danhSachPhim', danhSachPhim );
 
 
 

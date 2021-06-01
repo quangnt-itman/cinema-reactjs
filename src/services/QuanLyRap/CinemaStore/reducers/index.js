@@ -1,4 +1,4 @@
-import { CINEMA_LAY_CUM_RAP_CLICKED, CINEMA_L, CINEMA_LAY_CUM_RAP_THEO_HE_THONG } from "../constants";
+import { CINEMA_LAY_CUM_RAP_CLICKED, CINEMA_LAY_CUM_RAP_THEO_HE_THONG } from "../constants";
 
 let initialState = {
   cumRapClicked: null,
@@ -16,7 +16,7 @@ const cinemaStoreReducers = ( state = initialState, action ) => {
       lstCumRapTheoHeThong.push( action.cumRapTheoHeThong );
       state.lstCumRapTheoHeThong = lstCumRapTheoHeThong;
       return { ...state };
-      
+
 
     default:
       return { ...state };

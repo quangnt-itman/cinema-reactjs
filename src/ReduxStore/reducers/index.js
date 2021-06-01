@@ -1,11 +1,11 @@
 import { combineReducers } from "redux";
+import authReducers from "../../services/Auth/reducers";
 import cinemaReducers from "./cinemaReducers";
 import movieReducers from './movieReducers';
-// import { movieReducers } from './modules/movieReducers';
 
 const rootReducers = combineReducers( {
   movieReducers,
   cinemaReducers,
-  // movieReducers
+  authReducers
 } );
 export default rootReducers;

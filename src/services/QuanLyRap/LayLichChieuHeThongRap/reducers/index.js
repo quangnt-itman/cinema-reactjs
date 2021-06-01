@@ -24,6 +24,8 @@ const layLichChieuHeThongRapReducers = ( state = initialState, action ) => {
       state.loading = false;
       state.data = null;
       state.error = action.error;
+      return { ...state };
+
     default:
       return { ...state };
   }

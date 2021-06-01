@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 
-let current = moment( "2020-09-02T11:13:13" ).format( 'a' );
-console.log( current );
+// let current = moment( "2020-09-02T11:13:13" ).format( 'a' );
+// console.log( current );
 
 export class PhimCard extends Component {
   render () {
@@ -22,7 +22,7 @@ export class PhimCard extends Component {
                   <h5 className="card-title">{ phim.tenPhim }</h5>
                   <p className="card-text">
                     <b>
-                      <i class="fa fa-clock"></i> Thời lượng :{ " " }
+                      <i className="fa fa-clock"></i> Thời lượng :{ " " }
                     </b>
                     <span>120 phút</span>
                   </p>
