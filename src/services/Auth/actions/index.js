@@ -54,9 +54,41 @@ export const actDangNhap = ( user, history ) => dispatch => {
       let decode = jwtDecode( result.data.accessToken );
       let exp = ( decode.exp - decode.nbf ) * 1000;
       localStorage.setItem( 'token', JSON.stringify( result.data.accessToken ) );
-      localStorage.setItem( 'decode', JSON.stringify( decode ) );
+      localStorage.setItem( 'decode', JSON.stringify( { ...decode, ...result.data } ) );
       history.push( "/" );
       dispatch( actSetTimeOutLogOut( exp ) );
+
+    } )
+    .catch( error => {
+      // console.log( error );
+      dispatch( actDangNhapFailed( error ) );
+    } );
+};
+
+
+export const actDangNhapAdmin = ( user, history ) => dispatch => {
+  dispatch( actDangNhapRequest() );
+
+  axios( {
+    url: 'https://movie0706.cybersoft.edu.vn/api/QuanLyNguoiDung/DangNhap',
+    method: 'POST',
+    data: user
+  } )
+    .then( result => {
+      // console.log( result );
+      dispatch( actDangNhapSuccess( result.data ) );
+
+      if ( result.data.maLoaiNguoiDung === "QuanTri" ) {
+        // setHeaders( result.data.accessToken );
+        let decode = jwtDecode( result.data.accessToken );
+        let exp = ( decode.exp - decode.nbf ) * 1000;
+        localStorage.setItem( 'token', JSON.stringify( result.data.accessToken ) );
+        localStorage.setItem( 'decode', JSON.stringify( { ...decode, ...result.data } ) );
+        history.push( "/admin" );
+        dispatch( actSetTimeOutLogOut( exp ) );
+      } else {
+        alert( 'Ban khong co quyen truy cap !' );
+      }
 
     } )
     .catch( error => {
